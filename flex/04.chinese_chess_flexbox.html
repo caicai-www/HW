@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            width: 1200px;
+            height: 1200px;
+            /* background: lightblue; */
+            margin: auto;
+            position: relative;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+        .center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-end {
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+
+        .around {
+            justify-content: space-around;
+        }
+
+        .evenly {
+            justify-content: space-evenly;
+        }
+
+        .text {
+            font-size: 52px;
+            font-family: '標楷體';
+            margin: 1rem;
+            writing-mode: vertical-rl;
+        }
+
+        .text2 {
+            font-size: 50px;
+            font-family: '標楷體';
+            margin: 1rem;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .outline {
+            width: 1000px;
+            height: 1100px;
+            outline: 1px solid #000;
+        }
+
+        .board {
+            width: 800px;
+            height: 900px;
+            outline: 1px solid #000;
+        }
+
+
+        .block {
+            width: 100px;
+            height: 100px;
+            outline: 1px solid #000;
+        }
+
+        .line1 {
+            width: 141.4px;
+            height: 1px;
+            background: #000;
+            transform: rotate(45deg);
+            transform-origin: left top;
+        }
+
+        .line2 {
+            width: 141.4px;
+            height: 1px;
+            background: #000;
+            transform: rotate(135deg);
+            transform-origin: left top;
+        }
+
+
+        .mask {
+            width: 1000px;
+            height: 1100px;
+            /* background: rgba(0, 0, 0, 0.5); */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            user-select: none;
+        }
+
+        .col1 {
+            width: 900px;
+            height: 100px;
+            /* background: rgba(255, 0, 0, 0.25); */
+            position: relative;
+            top: 50px;
+            left: 50px
+        }
+
+        .col2 {
+            width: 900px;
+            height: 100px;
+            /* background: rgba(0, 255, 0, 0.25); */
+            position: relative;
+            top: 50px;
+            left: 50px
+        }
+
+        .col3 {
+            width: 680px;
+            height: 100px;
+            /* background: rgba(0, 0, 255, 0.25); */
+            position: relative;
+            top: 50px;
+            left: 160px
+        }
+
+        .col4 {
+            width: 900px;
+            height: 100px;
+            /* background: rgba(255, 255, 0, 0.25); */
+            position: relative;
+            top: 50px;
+            left: 50px
+        }
+
+        .chess {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid #999;
+            text-align: center;
+            line-height: 80px;
+            font-family: '標楷體';
+            font-size: 50px;
+        }
+
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container flex center">
+        <div class="text">
+            棋盤裡，車無輪，馬無韁，叫聲將軍提防提防</div>
+        <div class="outline flex center">
+            <div class="board flex column between">
+                <div class="col flex wrap">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block">
+                        <div class="line1"></div>
+                    </div>
+                    <div class="block"> </div>
+                    <div class="block">
+                        <div class="line2"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+
+                <div class="col flex around">
+                    <div class="text2">楚河</div>
+                    <div class="text2">漢界</div>
+                </div>
+
+                <div class="col flex wrap">
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block">
+                        <div class="line1"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block">
+                        <div class="line2"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                    </div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                    <div class="block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mask">
+            <div class="row1">
+                <div class="col1 flex around">
+                    <div class="chess">車</div>
+                    <div class="chess">馬</div>
+                    <div class="chess">象</div>
+                    <div class="chess">士</div>
+                    <div class="chess">將</div>
+                    <div class="chess">士</div>
+                    <div class="chess">象</div>
+                    <div class="chess">馬</div>
+                    <div class="chess">車</div>
+                </div>
+                <div class="col2"></div>
+                <div class="col3 flex between">
+                    <div class="chess">包</div>
+                    <div class="chess">包</div>
+                </div>
+                <div class="col4 flex between">
+                    <div class="chess">卒</div>
+                    <div class="chess">卒</div>
+                    <div class="chess">卒</div>
+                    <div class="chess">卒</div>
+                    <div class="chess">卒</div>
+                </div>
+                <div class="col3">
+                </div>
+                <div class="col2">
+                </div>
+                <div class="col4 flex between">
+                    <div class="chess red">兵</div>
+                    <div class="chess red">兵</div>
+                    <div class="chess red">兵</div>
+                    <div class="chess red">兵</div>
+                    <div class="chess red">兵</div>
+                </div>
+                <div class="col3 flex between">
+                    <div class="chess red">炮</div>
+                    <div class="chess red">炮</div>
+                </div>
+                <div class="col4">
+                </div>
+                <div class="col1 flex around">
+                    <div class="chess red">俥</div>
+                    <div class="chess red">傌</div>
+                    <div class="chess red">相</div>
+                    <div class="chess red">仕</div>
+                    <div class="chess red">帥</div>
+                    <div class="chess red">仕</div>
+                    <div class="chess red">相</div>
+                    <div class="chess red">傌</div>
+                    <div class="chess red">俥</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text">
+            圖畫裡，龍不吟，虎不嘯，小小書童可笑可笑</div>
+    </div>
+
+
+</body>
+
+</html>

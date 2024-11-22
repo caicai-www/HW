@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Felipa&family=Zen+Kurenaido&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 1rem;
+            box-sizing: border-box;
+            font-family: "Zen Kurenaido", sans-serif;
+        }
+
+        body {
+            background: #8ccdab;
+        }
+
+        #container {
+            width: 85%;
+            /* background: lightblue; */
+            margin: auto;
+        }
+
+        #banner {
+            height: 450px;
+            margin: 0;
+        }
+
+        .text {
+            width: 40%;
+            height: 400px;
+            background: lightgoldenrodyellow;
+            text-align: center;
+        }
+
+        .photo {
+            width: 900px;
+            height: 400px;
+            background: url('./images/menu.png');
+            background-size: cover;
+            border: 5px ridge #fff;
+
+        }
+
+
+        .title {
+            margin-top: 5rem;
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+            color: black;
+
+        }
+
+        p {
+            font-size: 14px;
+            margin: 1rem;
+        }
+
+        #action-card {
+            height: 100px;
+            /* background: lightcyan; */
+            border-radius: 5rem;
+            border: 5px double #fff;
+
+        }
+
+        marquee {
+            font-size: 52px;
+            vertical-align: middle;
+            color: #fff;
+        }
+
+
+
+        .area {
+            height: 400px;
+            background: lightyellow;
+            outline: 5px groove #fff;
+            text-align: center;
+            margin-top: 3rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            object-position: 0% 40%;
+        }
+
+        .title1 {
+            font-size: 20px;
+        }
+
+        hr {
+            margin-bottom: 1rem;
+        }
+
+        button {
+            margin: 0;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .flex-0 {
+            flex: 0 1 0%;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .between {
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="banner" class="flex flex-0 ">
+            <!-- 縮小會跑版要再調 -->
+            <div class="photo"></div>
+            <div class="text">
+                <div class="title">パジャマパーティーズ</div>
+                <p>XXXXXXXXXXXXXXXX</p>
+                <button>BUTTON</button>
+            </div>
+        </div>
+        <div id="action-card">
+            <marquee>う うわわ うわ うわわ たくたく ちゃお！</marquee>
+        </div>
+        <div id="card" class="flex wrap between">
+            <div class="area"><img class="img" src="./images/chiikawa.png">
+                <div class="title1">ちいかわ</div>
+                <p>ちょっぴり泣き虫だけど優しい性格。<br>
+                    草むしりや討伐などをして生活している。</p>
+                <hr>
+                <button>BUTTON</button>
+            </div>
+            <div class="area"><img class="img" src="./images/hachi.png">
+                <div class="title1">ハチワレ</div>
+                <p>ちいかわのともだち。明るくてポジティブ。<br>
+                    どうくつで生活している。</p>
+                <hr>
+                <button>BUTTON</button>
+            </div>
+            <div class="area"><img class="img" src="./images/usagi.png">
+                <div class="title1">うさぎ</div>
+                <p>ちいかわのともだち。<br>
+                    「ウラ」「ヤハ」など大声でよく叫ぶ。</p>
+                <hr>
+                <button>BUTTON</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
